@@ -291,6 +291,208 @@ questions.push(() => {
   //   false
 });
 
-const question0015 = () => {};
+questions.push(() => {
+  const val = 5.51;
+  console.log(Math.round(val));
+  console.log(Math.round(0 - val));
+
+  console.log(Math.floor(val));
+  console.log(Math.floor(0 - val));
+
+  console.log(Math.ceil(val));
+  console.log(Math.ceil(0 - val));
+
+  console.log(Math.abs(val));
+  console.log(Math.abs(0 - val));
+
+  // output will be
+  // 6
+  // -6
+  // 5
+  // -6
+  // 6
+  // -5
+  // 5.51
+  // 5.51
+});
+
+questions.push(() => {
+  function Name() {
+    return;
+    {
+      mes: "Javascript";
+    }
+  }
+  console.log(Name());
+
+  function caName() {
+    return {
+      mes: "Javascript",
+    };
+  }
+  console.log(caName());
+
+  // output will be
+  //   undefined
+  //   { mes: 'Javascript' }
+});
+
+questions.push(() => {
+  var array = [1, 2, 3, 4, 5];
+  console.log(array.length); //5
+
+  array.length = 3;
+
+  console.log(array.length); //3
+  console.log(array); //[1,2,3]
+
+  delete array[0];
+
+  console.log(array);
+  console.log(array[0]);
+  console.log(array.length);
+
+  // output will be
+  // 5
+  // 3
+  // [ 1, 2, 3 ]
+  // [ <1 empty item>, 2, 3 ]
+  // undefined
+  // 3
+});
+
+questions.push(() => {
+  const arr = [1, 2, 3];
+  const str = "1,2,3";
+
+  console.log(arr == str);
+  console.log(arr === str);
+
+  // output will be
+  // true
+  // false
+});
+
+questions.push(() => {
+  console.log(3 + 3 + "3" + 3 + 3);
+
+  console.log(1 + 2 + 3 + 4 + 5 + "6");
+
+  //output will be
+  //   6333
+  //   156
+});
+
+questions.push(() => {
+  var arr1 = [
+    [1, 2],
+    [2, 4],
+    [4, 8],
+  ];
+
+  var arr2 = [...arr1];
+
+  arr1[0][1] = "1";
+  arr1[0][0] = "0";
+  arr1[1] = 33;
+  arr1[0] = 22;
+  console.log(arr1);
+  console.log(arr2);
+
+  // output will be
+  // [ 22, 33, [ 4, 8 ] ]
+  // [ [ '0', '1' ], [ 2, 4 ], [ 4, 8 ] ]
+});
+
+questions.push(() => {
+  var testArrowFn = {
+    name: "abc",
+    foo: () => {
+      console.log(this.name);
+    },
+  };
+
+  var output = testArrowFn.foo;
+  output();
+  testArrowFn.foo();
+
+  var testFn = {
+    name: "abc",
+    foo: function () {
+      console.log(this.name);
+    },
+  };
+
+  var output = testFn.foo;
+  output();
+  testFn.foo();
+
+  // output will be
+  // undefined
+  // undefined
+  // undefined
+  // abc
+});
+
+questions.push(() => {
+  console.log(0.1 + 0.2 == 0.3);
+  console.log(0.3 + 0.6 == 0.9);
+
+  console.log(0.1 + 0.2);
+  console.log(0.3 + 0.6);
+
+  // output will be
+  // false
+  // false
+  // 0.30000000000000004
+  // 0.8999999999999999
+});
+
+questions.push(() => {
+  console.log("first");
+
+  setTimeout(() => {
+    console.log("second");
+  });
+
+  queueMicrotask(() => {
+    console.log("third");
+  });
+
+  // output will be
+  // first
+  // third
+  // second
+});
+
+questions.push(() => {
+  console.log(num);
+  var num;
+  num = 6;
+  console.log(num);
+
+  numb = 7;
+  console.log(numb);
+  let numb;
+
+  //output will be
+  // undefined
+  // 6
+  // D:\GIT\interview-coding-practical-questions\javascript\Top-50-Most-Asked-JavaScript-Logical-Interview-Questions\src\questions.js:474
+  //     numb=7;
+  //         ^
+
+  // ReferenceError: Cannot access 'numb' before initialization
+  //     at D:\GIT\interview-coding-practical-questions\javascript\Top-50-Most-Asked-JavaScript-Logical-Interview-Questions\src\questions.js:474:9
+  //     at D:\GIT\interview-coding-practical-questions\javascript\Top-50-Most-Asked-JavaScript-Logical-Interview-Questions\src\index.js:10:9
+  //     at Array.forEach (<anonymous>)
+  //     at Object.<anonymous> (D:\GIT\interview-coding-practical-questions\javascript\Top-50-Most-Asked-JavaScript-Logical-Interview-Questions\src\index.js:7:6)
+  //     at Module._compile (node:internal/modules/cjs/loader:1358:14)
+  //     at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+  //     at Module.load (node:internal/modules/cjs/loader:1208:32)
+  //     at Module._load (node:internal/modules/cjs/loader:1024:12)
+  //     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+  //     at node:internal/main/run_main_module:28:49
+});
 
 module.exports = questions;
