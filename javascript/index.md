@@ -1,1 +1,2 @@
-- [**Top 50 Most Asked JavaScript Logical Interview Questions**](./Top-50-Most-Asked-JavaScript-Logical-Interview-Questions/)
+- [**Top 50 Most Asked JavaScript Logical Interview Questions**](./Top-50-Most-Asked-JavaScript-Logical-Interview-Questions/Readme.md)
+- [**Javascript web-API methods**](./javascript-web-api-methods/Readme.md)
