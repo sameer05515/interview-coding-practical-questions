@@ -1,3 +1,6 @@
+# Documentation
+- [**Javascript web APIs**](https://developer.mozilla.org/en-US/docs/Web/API)
+
 # can you please list down all web api methods of javascript?
 
 Here’s a comprehensive list of Web API methods in JavaScript, organized by categories. These APIs allow JavaScript to interact with the browser and perform various tasks like manipulating the DOM, handling events, and communicating with servers.
