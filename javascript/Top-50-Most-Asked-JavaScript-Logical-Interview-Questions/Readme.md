@@ -1,0 +1,1 @@
+- This series based on [**Top 50 Most Asked JavaScript Logical Interview Questions**](https://www.youtube.com/watch?v=65slMcTFSMM)
