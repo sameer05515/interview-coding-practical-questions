@@ -154,6 +154,125 @@ const question0007 = () => {
   // true
 };
 
+const question0008 = () => {
+  const x1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 500, "one");
+  });
+
+  const x2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, "two");
+  });
+
+  Promise.all([x1, x2]).then((resolve) => {
+    console.log(resolve);
+  });
+
+  Promise.race([x1, x2]).then((resolve) => {
+    console.log(resolve);
+  });
+
+  // output will be
+  // two
+  // [ 'one', 'two' ]
+};
+
+const question0009 = () => {
+  const a = {};
+  const b = { key: "b" };
+  const c = { key: "c" };
+  const d = b;
+
+  a[b] = 143;
+  a[c] = 286;
+
+  console.log(a[b]);
+  console.log(b.toString());
+  console.log(a[d]);
+  console.log(JSON.stringify(a, null, 2));
+
+  // ouput will be
+  //   286
+  //   [object Object]
+  //   286
+  //   {
+  //     "[object Object]": 286
+  //   }
+};
+
+const question0010 = () => {
+  const h1 = { h: "Thor", i: "IM" };
+  const h2 = { h: "Thor", i: "IM" };
+  const h3 = h2;
+  console.log(h1 == h2);
+  console.log(h1 === h2);
+  console.log(h2 == h3);
+  console.log(h2 === h3);
+
+  // output will be
+  //   false
+  //   false
+  //   true
+  //   true
+};
+
+const question0011 = () => {
+  const array1 = [1, 2, 3];
+  const array2 = [1, 2, 3];
+  const array3 = array2;
+
+  console.log(array1 === array2);
+  console.log(array2 === array3);
+
+  const User = function (name) {
+    this.name = name;
+  };
+
+  const user1 = new User("Rowdy");
+  const user2 = new User("Rowdy");
+  console.log(user1 === user2);
+
+  // output will be
+  //   false
+  //   true
+  //   false
+};
+
+const question0012 = () => {
+  console.log((1 && 2) || 0 || 3);
+
+  console.log(null && undefined);
+
+  console.log(undefined && null);
+
+  console.log(0 || (1 && 2) || 3);
+
+  console.log(null || (2 && 3) || 4);
+
+  // output will be
+  //   2
+  //   null
+  //   undefined
+  //   2
+  //   3
+};
+
+const question0013 = () => {
+  console.log("goog" > "bad");
+  // 'g' > 'b'
+
+  console.log("Like" < "like");
+
+  console.log("Subscribe" > "Subg");
+
+  console.log("Subscribe" > "Subg");
+
+  // output will be
+  //   true
+  //   true
+  //   true
+  //   true
+};
+
 const questions = [
   question0001,
   question0002,
@@ -162,6 +281,12 @@ const questions = [
   question0005,
   question0006,
   question0007,
+  question0008,
+  question0009,
+  question0010,
+  question0011,
+  question0012,
+  question0013,
 ];
 
 module.exports = questions;
