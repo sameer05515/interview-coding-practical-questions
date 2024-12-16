@@ -1,4 +1,6 @@
-const question0001 = () => {
+const questions = [];
+
+questions.push(() => {
   console.log(5 > "15" < 5);
   // 5 > '15' = 5 > 15 = true
   // true < 5 = 0 < 5 = true
@@ -13,9 +15,9 @@ const question0001 = () => {
   // 7 < '85' = 7 < 85 = false
   // false > 5 = 0 > 5 = false
   // false
-};
+});
 
-const question0002 = () => {
+questions.push(() => {
   console.log(1);
 
   setTimeout(() => {
@@ -33,9 +35,9 @@ const question0002 = () => {
   // 4
   // 3
   // 2
-};
+});
 
-const question0003 = () => {
+questions.push(() => {
   console.log(1);
 
   setTimeout(() => {
@@ -60,9 +62,9 @@ const question0003 = () => {
 
   // Note: Promises will have higher priority than setTimeout
   // Note: Promises will be pushed to micro-queue
-};
+});
 
-const question0004 = () => {
+questions.push(() => {
   for (var i = 0; i < 4; i++) {
     console.log(i);
   }
@@ -81,9 +83,9 @@ const question0004 = () => {
   // 1
   // 2
   // 3
-};
+});
 
-const question0005 = () => {
+questions.push(() => {
   for (var i = 0; i < 4; i++) {
     setTimeout(() => {
       console.log(i);
@@ -125,9 +127,9 @@ const question0005 = () => {
   //   1
   //   2
   //   3
-};
+});
 
-const question0006 = () => {
+questions.push(() => {
   console.log(["a"] + ["b"]);
 
   console.log([] + []);
@@ -141,9 +143,9 @@ const question0006 = () => {
   // ''
   // false
   // false
-};
+});
 
-const question0007 = () => {
+questions.push(() => {
   console.log(3 < 4 < 5);
   console.log(3 > 4 > 5);
   console.log(3 > 4 > -1);
@@ -152,9 +154,9 @@ const question0007 = () => {
   // true
   // false
   // true
-};
+});
 
-const question0008 = () => {
+questions.push(() => {
   const x1 = new Promise((resolve, reject) => {
     setTimeout(resolve, 500, "one");
   });
@@ -174,9 +176,9 @@ const question0008 = () => {
   // output will be
   // two
   // [ 'one', 'two' ]
-};
+});
 
-const question0009 = () => {
+questions.push(() => {
   const a = {};
   const b = { key: "b" };
   const c = { key: "c" };
@@ -197,9 +199,9 @@ const question0009 = () => {
   //   {
   //     "[object Object]": 286
   //   }
-};
+});
 
-const question0010 = () => {
+questions.push(() => {
   const h1 = { h: "Thor", i: "IM" };
   const h2 = { h: "Thor", i: "IM" };
   const h3 = h2;
@@ -213,9 +215,9 @@ const question0010 = () => {
   //   false
   //   true
   //   true
-};
+});
 
-const question0011 = () => {
+questions.push(() => {
   const array1 = [1, 2, 3];
   const array2 = [1, 2, 3];
   const array3 = array2;
@@ -235,9 +237,9 @@ const question0011 = () => {
   //   false
   //   true
   //   false
-};
+});
 
-const question0012 = () => {
+questions.push(() => {
   console.log((1 && 2) || 0 || 3);
 
   console.log(null && undefined);
@@ -254,9 +256,9 @@ const question0012 = () => {
   //   undefined
   //   2
   //   3
-};
+});
 
-const question0013 = () => {
+questions.push(() => {
   console.log("goog" > "bad");
   // 'g' > 'b'
 
@@ -264,29 +266,31 @@ const question0013 = () => {
 
   console.log("Subscribe" > "Subg");
 
-  console.log("Subscribe" > "Subg");
+  console.log("SubScribe" > "Subg");
 
   // output will be
   //   true
   //   true
   //   true
-  //   true
-};
+  //   false
+});
 
-const questions = [
-  question0001,
-  question0002,
-  question0003,
-  question0004,
-  question0005,
-  question0006,
-  question0007,
-  question0008,
-  question0009,
-  question0010,
-  question0011,
-  question0012,
-  question0013,
-];
+questions.push(() => {
+  console.log("9" > "11");
+
+  console.log("9" > 11);
+
+  console.log("" > -1);
+
+  console.log("Rowdy" > 1);
+
+  // output will be
+  //   true
+  //   false
+  //   true
+  //   false
+});
+
+const question0015 = () => {};
 
 module.exports = questions;
